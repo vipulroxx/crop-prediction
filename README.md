@@ -13,7 +13,7 @@ Estimation of crop pregression particularly in rainy season much crop may be sev
 > Shakti Swaroop Biswal\
 > Aditri Chowdhury\
 > Aneesh Yadav\
-> Shubham Sonal\
+> Shubham Sonal
 
 ### Organisation
 
