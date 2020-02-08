@@ -16,10 +16,21 @@
 
 .data-analysis-card {
   float: right;
-  max-width: 46%;
+  max-width: 47%;
+  background-color: #c2185b;
+  margin-top: 32px;
+  margin-right: 15px;
+}
+
+.graph-analysis-card {
+  float: left;
+  position:relative;
+  top:-420px;
+  max-width: 42%;
   background-color: #c2185b;
   margin-top: 32px;
   margin-right: 32px;
+
 }
 
 .neural-net-card {

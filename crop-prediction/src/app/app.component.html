@@ -49,15 +49,6 @@
           <mat-chip color="accent" selected>Large Hadron Collider</mat-chip>
         </mat-chip-list>
       </mat-tab>
-      <mat-tab label="Dataset Description">
-        <div class="cern-large-box mat-elevation-z4">
-          Training set of 250000 events, with an ID column, 30 feature columns, a weight column and a label column. Test set of 550000 events with an ID column and 30 feature columns. All variables are floating point, except PRI_jet_num which is integer variables prefixed with PRI (for PRImitives) are “raw” quantities about the bunch collision as measured by the detector. Variables prefixed with DER (for DERived) are quantities computed from the primitive features, which were selected by the physicists of ATLAS. NA values are -999.
-        </div><br>
-        <mat-chip-list>
-          <mat-chip color="accent" selected>Data</mat-chip>
-          <mat-chip color="accent" selected>Description</mat-chip>
-        </mat-chip-list>
-      </mat-tab>
     </mat-tab-group>
   </mat-card-content>
 </mat-card>
@@ -73,13 +64,13 @@
   <img mat-card-image src="../../../assets/img/graphs/incomplete-values/graph.jpeg" alt="Image of Incomplete values">
   <mat-card-content>
     <mat-tab-group dynamicHeight>
-      <mat-tab label="NON ASSIGNED VALUES">
+      <mat-tab label="DATASET ANALYSIS">
         <div class="cern-small-box mat-elevation-z4">
-          The non assigned values in the dataset has been assigned as the floating point number -999.000. To calculate the percentage, the package pandas was used in the programming language Python to convert the dataset which was originally in csv to a dataframe. The dataframe was then checked over column by column to calculate the percentage ratio along of the value -999.000 occuring in the column.Seven data fields had missing values upto 70% while three data fields had missing values upto 40%. One data feature had missing value of 15.24%. All other data features had no other missing values.
+          The data set we have used here consists of data metrics of five most important agricultural states of India including Bihar where the parameters include : Rainfall, Minimum Temperature, Maximum Temperature, Cloud Cover, Vapour Pressure, Reference Crop Evapotransporation and Potential Evapotransporation.<br> <br> The following parameter data is taken from all twelve months for a period of 1901 to 2002. This data set is then transposed to project the month on our column so we may be able to extract all the month details at once, given a particular year and state name. The data is then used to train our deep learning model to predict rainfall in future event based on the listed parameters and thus estimate and predict the crop progression and yield in the future by extrapolation of data by the learning network.
         </div><br>
         <mat-chip-list>
-          <mat-chip color="accent" selected>NaN</mat-chip>
-          <mat-chip color="accent" selected>71% and 40%</mat-chip>
+          <mat-chip color="accent" selected>twelve months</mat-chip>
+          <mat-chip color="accent" selected>6 features and 1 target feature</mat-chip>
         </mat-chip-list>
       </mat-tab>
     </mat-tab-group>
@@ -136,6 +127,7 @@
     </mat-tab-group>
   </mat-card-content>
 </mat-card>
+
 <mat-toolbar color="primary"  class="data-head">
   <mat-toolbar-row>
     <span> Dataset Features</span>
@@ -234,13 +226,39 @@
   <img mat-card-image src=":../../../assets/img/homepage/use-case-1.png" alt="Use Case Diagram" style="margin-top: 1px;">
   <mat-card-content>
     <mat-tab-group dynamicHeight>
-      <mat-tab label="NON ASSIGNED VALUES">
+      <mat-tab label="AgroB">
         <div class="cern-small-box mat-elevation-z4">
-         THIS WILL BE UPDATED SOON!!
+         Above diagram shows the use case of the various components of our project. It shows how our problem statement connects with various components of our project such as the data set and the model in the main app root component.
         </div><br>
       </mat-tab>
     </mat-tab-group>
   </mat-card-content>
 </mat-card>
+
+<mat-card color="primary" class="graph-analysis-card">
+  <mat-card-header>
+    <div mat-card-avatar class="cern-header-image"></div>
+    <mat-card-title><strong>Graph Analysis</strong></mat-card-title>
+    <mat-card-subtitle><strong>Monthly regression graphs</strong></mat-card-subtitle>
+    <span class="cern-spacer"></span>
+    <i class="material-icons">bookmark_border</i>
+  </mat-card-header>
+  <img mat-card-image src="../../../assets/img/graphs/features/regression-Bihar-Jan.png" alt="Image of Incomplete values">
+  <mat-card-content>
+    <mat-tab-group dynamicHeight>
+      <mat-tab label="DATASET ANALYSIS">
+        <div class="cern-small-box mat-elevation-z4">
+          After normalizing the dataset using the pandas preprocessing library we move on to make the model in which we call our multilinear regression model function. <br><br>
+          The regression plane that we can see above was produced after using the Mean Squared Error in multi linear regression which divided almost all of the data and minimized the error the most.
+        </div><br>
+        <mat-chip-list>
+          <mat-chip color="accent" selected>MSE</mat-chip>
+          <mat-chip color="accent" selected>Prediction</mat-chip>
+        </mat-chip-list>
+      </mat-tab>
+    </mat-tab-group>
+  </mat-card-content>
+</mat-card>
+
 </body>
 </html>
