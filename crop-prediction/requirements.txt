@@ -95,7 +95,7 @@ subprocess32==3.5.3
 svgwrite==1.1.12
 tb-nightly==1.14.0a20190603
 tensorboard==1.12.1
-tensorflow==2.0.0b1
+tensorflow==2.7.2
 termcolor==1.1.0
 tf-estimator-nightly==1.14.0.dev2019060501
 tornado==5.1.1
